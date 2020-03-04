@@ -1,0 +1,15 @@
+*SIMPLE*
+1.list all animals living in zone x.
+2.list all animals with age > 5.
+3.find all animals of order x.
+4.find the age of employees of zone y.
+
+*INTERMIDIATE*
+5.find the zones which sell "platypus burger" but not "dolphin plushie".
+6.find the employees with salary greater than that of some intructor in the "Z" department.
+7.list the average salary of the employees in the department with atleast 3 employees.
+
+*COMPLEX*
+8.find all caretakers of animals with carnivore diet.
+9.find the number of animals in each zone.
+10.find the priciest merchandise of the shop that generates the maximum revenue.
