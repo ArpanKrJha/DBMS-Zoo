@@ -1,0 +1,90 @@
+CREATE TABLE Animal(
+id number(5),
+name varchar(50),
+date_of_entry date,
+phylum varchar(50),
+class varchar(50),
+order varchar(50),
+family varchar(50),
+genus varchar(50),
+species varchar(50),
+gender char(1),
+caretaker_id number(5),
+zone_id number(5),
+primary key(id),
+foreign key(caretaker_id) references Employee(id),
+foreign key(zone_id) references Zone(id),
+check(gender in ('M','F'))
+);
+
+CREATE TABLE Employee(
+id number(5),
+name varchar(50),
+date_of_birth date,
+gender char(1),
+contact_no number(10),
+address varchar(100),
+salary number(8),
+manager_id number(5),
+dept_name varchar(50),
+zone_id number(5),
+shop_id number(5),
+primary key(id),
+foreign key(manager_id) references Employee(id),
+foreign key(zone_id) references Zone(id),
+foreign key(shop_id) references Shop(id),
+check(gender in ('M','F'))
+);
+
+CREATE TABLE Diet(
+animal_id number(5),
+id number(5),
+type varchar(50),
+food_item varchar(50),
+calories number(5),
+cost number(8),
+primary key(animal_id,id),
+foreign key(animal_id) references Animal(id)
+);
+
+CREATE TABLE Zone(
+id number(5),
+type varchar(50),
+habitat varchar(50),
+area number(8),
+primary key(id)
+);
+
+CREATE TABLE Department(
+name varchar(50),
+budget number(8),
+primary key(name)
+);
+
+CREATE TABLE Shop(
+id number(5),
+revenue number(8),
+primary key(id)
+);
+
+CREATE TABLE Shop_type(
+shop_id number(5),
+type varchar(50),
+primary key(shop_id,type),
+foreign key(shop_id) references Shop(id)
+);
+
+CREATE TABLE Merchandise(
+name varchar(50),
+category varchar(50),
+price number(8),
+primary key(name)
+);
+
+CREATE TABLE Sells(
+shop_id number(5),
+merch_name varchar(50),
+primary key(shop_id,merch_name),
+foreign key(shop_id) references Shop(id),
+foreign key(merch_name) references Merchandise(name)
+);
