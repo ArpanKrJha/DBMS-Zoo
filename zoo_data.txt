@@ -1,0 +1,11 @@
+*Animal*
+INSERT INTO Animal VALUES(10000,'Lion','4-Mar-2020','Chordata','Mammalia','Carnivora','Felidae','Panthera','P. leo','F',11200,10010);
+INSERT INTO Animal VALUES(10001,'Lion','5-Mar-2020','Chordata','Mammalia','Carnivora','Felidae','Panthera','P. leo','M',11201,10010);
+INSERT INTO Animal VALUES(10100,'Emperor Penguin','4-Mar-2020','Chordata','Aves','Sphenisciformes','Spheniscidae','Aptenodytes','A. forsteri','F',11205,10020);
+
+*Employee*
+INSERT INTO Employee VALUES(11200,'Anoushka','3-Jun-1980','F',9192109946,'Mumbai',............);
+
+*Zone*
+INSERT INTO Zone VALUES(10010,'Open','Grassland',2000);
+INSERT INTO Zone VALUES(10020,'Closed','Tundra',1500);
